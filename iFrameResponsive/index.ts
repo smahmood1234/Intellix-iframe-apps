@@ -10,9 +10,6 @@ export class iFrameResponsive implements ComponentFramework.StandardControl<IInp
     private buttonClickHandler: () => void;
     private originalButtonText: string;
 
-    /**
-     * Empty constructor.
-     */
     constructor() {
         this.isInitialized = false;
         this.isIframeOpen = false;
@@ -27,7 +24,6 @@ export class iFrameResponsive implements ComponentFramework.StandardControl<IInp
      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
      */
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement): void {
-        // Add control initialization code
         context.mode.trackContainerResize(true);
         this.container = container;
     }
@@ -65,8 +61,6 @@ export class iFrameResponsive implements ComponentFramework.StandardControl<IInp
             this.iframeContainer.style.width = iframeWidth;
         }
 
-        // Container is now invisible (display: contents)
-        // Button sizing is handled by the buttonWidth and buttonHeight properties
     }
 
     private createUI(context: ComponentFramework.Context<IInputs>): void {
@@ -223,16 +217,12 @@ export class iFrameResponsive implements ComponentFramework.StandardControl<IInp
             // Generate hover color (darker version)
             const hoverColor = this.darkenColor(buttonColor, 20);
             this.button.style.setProperty("--hover-color", hoverColor);
-        } else {
-            this.button.style.backgroundColor = "#0078d4";
         }
 
         // Apply button text color
         const buttonTextColor = context.parameters.buttonTextColor?.raw;
         if (buttonTextColor) {
             this.button.style.color = buttonTextColor;
-        } else {
-            this.button.style.color = "white";
         }
 
         // Apply font size
@@ -322,11 +312,10 @@ export class iFrameResponsive implements ComponentFramework.StandardControl<IInp
      */
     public destroy(): void {
         // Clean up event listeners
-        if (this.button) {
+        if (this.button && this.buttonClickHandler) {
             this.button.removeEventListener("click", this.buttonClickHandler);
         }
         
-
         // Remove resize listener
         window.removeEventListener('resize', this.setDynamicHeight);
 
