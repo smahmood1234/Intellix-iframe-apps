@@ -1,7 +1,7 @@
 {
-  "name": "pcf-project",
+  "name": "intellixcore-iframe",
   "version": "1.0.0",
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
+  "description": "IntellixCore-Iframe - PowerApps Component Framework (PCF) control for responsive iframes.",
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",

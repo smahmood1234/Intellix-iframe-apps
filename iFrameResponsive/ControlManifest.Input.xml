@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="pcfiframe" constructor="iFrameResponsive" version="0.0.1" display-name-key="iFrameResponsive" description-key="iFrameResponsive description" control-type="standard"  >
+  <control namespace="iciframe" constructor="iFrameResponsive" version="0.1.1" display-name-key="IntellixCore-Iframe" description-key="IntellixCore-Iframe Button with iframe" control-type="standard"  >
     <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
     If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
     Example1:
@@ -19,7 +19,21 @@
       -->
     </external-service-usage>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true"  />
+    <property name="buttonText" display-name-key="Button_Text" description-key="Text to display on the button" of-type="SingleLine.Text" usage="bound" required="false" default-value="Agent1" />
+    <property name="targetUrl" display-name-key="Target_URL" description-key="URL to open in the iframe" of-type="SingleLine.Text" usage="bound" required="false" default-value="" />
+    <property name="iframeWidth" display-name-key="Iframe_Width" description-key="Width of the iframe (e.g., 50%, 800px)" of-type="SingleLine.Text" usage="bound" required="false" default-value="50%" />
+    <property name="buttonSize" display-name-key="Button_Size" description-key="Button size (small, medium, large) or custom CSS value" of-type="SingleLine.Text" usage="bound" required="false"  />
+    <property name="buttonWidth" display-name-key="Button_Width" description-key="Button width (e.g., 100px, 150px)" of-type="SingleLine.Text" usage="bound" required="false" default-value="100px" />
+    <property name="buttonHeight" display-name-key="Button_Height" description-key="Button height (e.g., 40px, 50px)" of-type="SingleLine.Text" usage="bound" required="false" default-value="40px" />
+    <property name="buttonColor" display-name-key="Button_Color" description-key="Button background color (e.g., #0078d4, blue, red)" of-type="SingleLine.Text" usage="bound" required="false" default-value="white" />
+    <property name="buttonTextColor" display-name-key="Button_Text_Color" description-key="Button text color (e.g., white, #000000)" of-type="SingleLine.Text" usage="bound" required="false" default-value="#8BC34A" />
+    <property name="buttonFontSize" display-name-key="Button_Font_Size" description-key="Button font size (e.g., 12px, 14px, 16px)" of-type="SingleLine.Text" usage="bound" required="false"  />
+    <property name="buttonFontFamily" display-name-key="Button_Font_Family" description-key="Button font family (e.g., Arial, Verdana, Segoe UI)" of-type="SingleLine.Text" usage="bound" required="false"  />
+    <property name="buttonCustomStyle" display-name-key="Button_Custom_Style" description-key="Additional custom CSS styles for the button" of-type="SingleLine.Text" usage="bound" required="false"  />
+    <property name="buttonBorderWidth" display-name-key="Button_Border_Width" description-key="Border width (e.g., 1px, 2px)" of-type="SingleLine.Text" usage="bound" required="false" default-value="1px" />
+    <property name="buttonBorderStyle" display-name-key="Button_Border_Style" description-key="Border style (e.g., solid, dashed, dotted)" of-type="SingleLine.Text" usage="bound" required="false" default-value="solid" />
+    <property name="buttonBorderColor" display-name-key="Button_Border_Color" description-key="Border color (e.g., #8BC34A, green)" of-type="SingleLine.Text" usage="bound" required="false" default-value="#8BC34A" />
+    <property name="buttonBorderRadius" display-name-key="Button_Border_Radius" description-key="Border radius (e.g., 4px, 8px)" of-type="SingleLine.Text" usage="bound" required="false" default-value="4px" />
     <!--
       Property node's of-type attribute can be of-type-group attribute.
       Example:
@@ -33,10 +47,8 @@
     -->
     <resources>
       <code path="index.ts" order="1"/>
-      <!-- UNCOMMENT TO ADD MORE RESOURCES
       <css path="css/iFrameResponsive.css" order="1" />
       <resx path="strings/iFrameResponsive.1033.resx" version="1.0.0" />
-      -->
     </resources>
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
     <feature-usage>

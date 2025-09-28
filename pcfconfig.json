@@ -1,3 +1,57 @@
 {
-    "outDir": "./out/controls"
+    "outDir": "./out/controls",
+    "testHarness": {
+        "controls": [
+            {
+                "control": "iciframe.iFrameResponsive",
+                "properties": {
+                    "buttonText": {
+                        "value": "Agent1"
+                    },
+                    "targetUrl": {
+                        "value": "https://www.google.com"
+                    },
+                    "iframeWidth": {
+                        "value": "50%"
+                    },
+                    "buttonSize": {
+                        "value": ""
+                    },
+                    "buttonWidth": {
+                        "value": "100px"
+                    },
+                    "buttonHeight": {
+                        "value": "40px"
+                    },
+                    "buttonColor": {
+                        "value": "white"
+                    },
+                    "buttonTextColor": {
+                        "value": "#8BC34A"
+                    },
+                    "buttonFontSize": {
+                        "value": ""
+                    },
+                    "buttonFontFamily": {
+                        "value": ""
+                    },
+                    "buttonCustomStyle": {
+                        "value": ""
+                    },
+                    "buttonBorderWidth": {
+                        "value": "1px"
+                    },
+                    "buttonBorderStyle": {
+                        "value": "solid"
+                    },
+                    "buttonBorderColor": {
+                        "value": "#8BC34A"
+                    },
+                    "buttonBorderRadius": {
+                        "value": "4px"
+                    }
+                }
+            }
+        ]
+    }
 }

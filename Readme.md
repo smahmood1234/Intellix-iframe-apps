@@ -1,10 +1,10 @@
-# iFrameResponsive
+# IntellixCore-Iframe
 
 A PowerApps Custom Control for embedding responsive iframes in your PowerApps solutions.
 
 ## Overview
 
-**iFrameResponsive** is a PowerApps PCF (PowerApps Component Framework) control that allows you to embed external web content via an iframe, with full responsiveness and configuration options. This control is ideal for scenarios where you need to display web pages, dashboards, or other web-based resources within your PowerApps applications, and want the iframe to adapt to different screen sizes.
+**IntellixCore-Iframe** is a PowerApps PCF (PowerApps Component Framework) control that allows you to embed external web content via an iframe, with full responsiveness and configuration options. This control is ideal for scenarios where you need to display web pages, dashboards, or other web-based resources within your PowerApps applications, and want the iframe to adapt to different screen sizes.
 
 ## Features
 

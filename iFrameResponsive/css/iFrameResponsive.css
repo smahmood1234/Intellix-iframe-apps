@@ -1,0 +1,118 @@
+/* IntellixCore-Iframe Button and iframe Styles */
+.iciframe-container {
+    display: contents !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.iciframe-button {
+    background-color: white !important;
+    color: #8BC34A !important;
+    border: 1px solid #8BC34A !important;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+/* Button size variations */
+.iciframe-button.size-small {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.iciframe-button.size-medium {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.iciframe-button.size-large {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+.iciframe-button.size-extra-large {
+    padding: 14px 28px;
+    font-size: 18px;
+}
+
+.iciframe-button:hover {
+    background-color: var(--hover-color, #106ebe);
+}
+
+.iciframe-button:active {
+    background-color: #005a9e;
+}
+
+.iciframe-button:disabled {
+    background-color: #c8c6c4;
+    cursor: not-allowed;
+}
+
+.iciframe-iframe-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    min-width: 400px;
+    height: 100vh;
+    z-index: 9999;
+    background: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.iciframe-iframe-container.show {
+    display: block;
+    transform: translateX(0);
+}
+
+
+
+.iciframe-iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .iciframe-iframe-container {
+        width: 100%;
+        min-width: 300px;
+        border: none;
+    }
+    
+    .iciframe-iframe {
+        height: 100vh;
+    }
+}
